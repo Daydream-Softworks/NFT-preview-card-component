@@ -1,0 +1,238 @@
+/* Variables */
+:root {
+  --color-soft-blue: #8bacda;
+  --color-cyan: #00fff7;
+  --color-main-bg: #0d192b;
+  --color-card-bg: #14253d;
+  --line-line: #2f415b;
+  --color-white: #ffffff;
+}
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Outfit", system-ui;
+  background-color: var(--color-main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nft-card {
+  max-width: 18.167rem;
+  background-color: var(--color-card-bg);
+  border-radius: 15px;
+  box-shadow: 0 25px 50px 0 #00000018;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.card-img {
+  max-width: 15.44rem;
+  margin: 1.33rem;
+  border-radius: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.overlay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 15.44rem;
+  min-height: 15.44rem;
+  margin: 1.33rem;
+  border-radius: 8px;
+  background-color: #00fff770;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay{
+  cursor:pointer;
+   opacity: 1;
+}
+
+h1 {
+  font-size: 1.22rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-left: 1.33rem;
+  margin-right: 1.33rem;
+  margin-bottom: 0.667rem;
+}
+
+h1:hover {
+  color: var(--color-cyan);
+  cursor: pointer;
+}
+
+.supporting-text {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.44rem;
+  color: var(--color-soft-blue);
+  margin-left: 1.33rem;
+  margin-right: 1.33rem;
+  margin-bottom: 0.889rem;
+}
+
+.extra-info {
+  max-width: 15.44rem;
+  margin-left: 1.33rem;
+  margin-right: 1.33rem;
+  margin-bottom: 0.889rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eth {
+  max-width: 4.916rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.33rem;
+}
+
+.etherum-icon {
+  max-width: 0.611rem;
+  max-height: 1rem;
+}
+
+.etherum-value {
+  font-size: 0.833rem;
+  font-weight: 600;
+  color: var(--color-cyan);
+}
+
+.days {
+  max-width: 5.149rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.44rem;
+}
+
+.clock-icon {
+  max-width: 0.889rem;
+  max-height: 0.889rem;
+}
+
+.days-value {
+  font-size: 0.833rem;
+  font-weight: 400;
+  color: var(--color-soft-blue);
+}
+
+hr {
+  margin-left: 1.33rem;
+  margin-right: 1.33rem;
+  margin-bottom: 0.889rem;
+  border: 1px solid var(--line-line);
+}
+
+footer {
+  max-width: 12.167rem;
+  margin-left: 1.33rem;
+  margin-right: 4.667rem;
+  margin-bottom: 1.33rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.889rem;
+}
+
+.author-img {
+  max-width: 1.833rem;
+  max-height: 1.833rem;
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+}
+
+.footer-text {
+  font-size: 0.833rem;
+  font-weight: 400;
+  color: var(--color-soft-blue);
+}
+
+.author-name {
+  color: var(--color-white);
+}
+
+.author-name:hover {
+  color: var(--color-cyan);
+  cursor: pointer;
+}
+
+/* Desktop */
+@media (min-width: 1440px){
+
+  .nft-card {
+    max-width: 19.44rem;
+  }
+
+  .card-img {
+    max-width: 16.78rem;
+  } 
+
+  .overlay{
+    min-width: 16.78rem;
+    min-height: 16.78rem;
+  }
+
+  h1 {
+    margin-bottom: 0.889rem;
+  }
+
+  .supporting-text {
+    margin-bottom: 1.33rem;
+  }
+
+  .extra-info {
+    max-width: 16.72rem;
+    margin-bottom: 1.33rem;
+  }
+
+  .eth {
+    max-width: 5.193rem;
+  }
+
+  .etherum-value {
+    font-size: 0.889rem;
+  }
+
+  .days {
+    max-width: 5.426rem;
+  }
+
+  .days-value {
+    font-size: 0.889rem;
+  }
+
+  footer {
+    max-width: 12.78rem;
+    margin-right: 5.33rem;
+    margin-bottom: 1.778rem;
+  }
+
+  .footer-text {
+    font-size: 0.889rem;
+  }
+
+}
+
